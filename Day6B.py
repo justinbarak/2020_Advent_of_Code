@@ -40,22 +40,26 @@ total = 0
 for line in combined:
     aset = set()
     bset = set()
-    j = 0
-    while aset == None:
+    j = [0]
+    while len(aset) == 0:
         for i, char in enumerate(line):
             if char != " ":
                 aset.add(char)
             if char == " ":
-                j = i
+                j[0] = i
                 break
-    i = j
+    i = j[0] + 1
     while i < len(line):
         char = line[i:i+1]
         if char != " ":
             bset.add(char)
         else:
-            aset.intersection(bset)
-            bset.clear
+            aset = aset.intersection(bset)
+            bset.clear()
+        i += 1
+    if len(bset) > 0:
+        aset.intersection(bset)
+        bset.clear()      
     total += len(aset)
 
 print(total)
