@@ -1,7 +1,6 @@
 import copy
 
-
-def load(filename):
+def load(filename: str) -> list:
     """Open a text file & return a list of lowercase strings."""
     try:
         with open(filename) as in_file:

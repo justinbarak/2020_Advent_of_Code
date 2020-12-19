@@ -1,0 +1,17 @@
+{
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[Atom One Dark]": { // Apply to this theme only
+            "enabled": true,
+            "rules": {
+                "magicFunction:python": "#ee0000",
+                "module:python": "#e4d948",
+                "*.decorator:python": "#0000dd",
+                "*.typeHint:python": "#a257ec",
+                "*.typeHintComment:python": "#aaaaaa"
+            }
+        }
+    }
+}
